@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 const Blog = () => {
       const path = usePathname();
       const detail = path.replace(/\/blog\//g, '');
-    const filteredBlog = BLOG_POST_DATA_LIST?.filter(obj =>
+       const filteredBlog = BLOG_POST_DATA_LIST?.filter(obj =>
         obj.title?.toLowerCase()?.replace(/ /g, '-') === detail
       );
   return (
